@@ -5,10 +5,10 @@
 -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
- id        = "kz.vezuedu"
-      version   = "105.6">
+ id        = "kz.smarthomealma.controlsoft"
+      version   = "1.0.0">
 
-    <name>ВезуЕду</name>
+    <name>Умный Дома Алматы</name>
 
     <description>
 Везуеду — это приложение для быстрого, удобного и выгодного осуществления заказов еды на дом или в офис, а также просмотра меню всех ресторанов в городе Павлодар.
