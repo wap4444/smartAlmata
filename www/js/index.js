@@ -20,7 +20,7 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 	    
-	    
+	     rr=1;
 	    document.addEventListener("offline", onOffline, false);
  
 function onOffline() {
@@ -63,9 +63,11 @@ var ref = cordova.InAppBrowser.open('http://smarthomealma.controlsoft.kz/fr7/ind
 });
         
 function didReceiveRemoteNotificationCallBack(jsonData) {
+	rr=2;
 var ref = cordova.InAppBrowser.open(jsonData.payload.additionalData.ssylka, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 }
 function didOpenRemoteNotificationCallBack(jsonData) {
+	rr=2;
 var ref = cordova.InAppBrowser.open(jsonData.payload.additionalData.ssylka, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 
 }       
@@ -85,10 +87,13 @@ var ref = cordova.InAppBrowser.open(jsonData.payload.additionalData.ssylka, '_bl
         
 window.plugins.OneSignal.getIds(function(ids) {
 ipush = ids.userId;
+	if(rr==1)
+            {
 $('.loader1').hide();
 localStorage.ipush=ipush;
 var ref = cordova.InAppBrowser.open('http://smarthomealma.controlsoft.kz/fr7/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 $('.loader2').show();
+	    }
 });
         
 
