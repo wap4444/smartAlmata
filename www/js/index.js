@@ -63,11 +63,10 @@ var ref = cordova.InAppBrowser.open('http://smarthomealma.controlsoft.kz/fr7/ind
 });
         
 function didReceiveRemoteNotificationCallBack(jsonData) {
-	rr=2;
+	alert(didReceiveRemoteNotificationCallBack);
 var ref = cordova.InAppBrowser.open(jsonData.payload.additionalData.ssylka, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 }
 function didOpenRemoteNotificationCallBack(jsonData) {
-	rr=2;
 var ref = cordova.InAppBrowser.open(jsonData.payload.additionalData.ssylka, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 
 }       
