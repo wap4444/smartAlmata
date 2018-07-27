@@ -41,6 +41,7 @@ Maxim Morozov
         <icon height="29" platform="ios" src="res/icon/ios/Icon-App-29x29@1x.png" width="29" />
         <icon height="58" platform="ios" src="res/icon/ios/Icon-App-29x29@2x.png" width="58" />
         <icon height="87" platform="ios" src="res/icon/ios/Icon-App-29x29@3x.png" width="87" />
+        <icon height="1024" platform="ios" src="res/icon/ios/iTunesArtwork@2x.png" width="1024" />
         <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
         <splash src="res/screen/ios/Default@2x~universal~comany.png" />
     </platform>
