@@ -23,13 +23,13 @@ var app = {
 function onOffline() {
 $('#BtnEnt').hide();
 $('#inetOff').show();
-var ref = cordova.InAppBrowser.open('http://smarthomealma.controlsoft.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 ref.close();
 }
 document.addEventListener("online", onOnline, false);
  
 function onOnline() {
-var ref = cordova.InAppBrowser.open('http://smarthomealma.controlsoft.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 $('#inetOff').hide();
 $('#BtnEnt').show();
 }
@@ -56,7 +56,7 @@ var arr = ["Подготовка списка домов...", "Подготов�
 	    
 
 $("#BtnEnt" ).click(function() {
-var ref = cordova.InAppBrowser.open('http://smarthomealma.controlsoft.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 });
         
 function didReceiveRemoteNotificationCallBack(jsonData) {}
@@ -68,7 +68,7 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
 
         //ПОДКЛЮЧЕНИЕ ПУШЕЙ 
            window.plugins.OneSignal
-          .startInit("5ced1550-2eb8-4666-9d66-ef701a9c1b97")
+          .startInit("338ecc0f-8620-437d-9ed3-9cd12d5976d9")
           .handleNotificationReceived(didReceiveRemoteNotificationCallBack)
           .handleNotificationOpened(didOpenRemoteNotificationCallBack)
           .inFocusDisplaying(window.plugins.OneSignal.OSInFocusDisplayOption.None)
@@ -79,7 +79,7 @@ window.plugins.OneSignal.getIds(function(ids) {
 ipush = ids.userId;
 $('.loader1').hide();
 localStorage.ipush=ipush;
-var ref = cordova.InAppBrowser.open('http://smarthomealma.controlsoft.kz/fr7/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 $('.loader2').show();
 });
         
