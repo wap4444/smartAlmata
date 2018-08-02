@@ -43,8 +43,9 @@ Maxim Morozov
         <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
         <splash src="res/screen/ios/Default@2x~universal~comany.png" />
     </platform>
+    <!--
     <engine name="ios" spec="latest" />
-      
+      -->
           <access origin="*" />
     <!--
        <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
