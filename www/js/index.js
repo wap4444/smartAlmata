@@ -21,42 +21,22 @@ var app = {
     receivedEvent: function(id) {
 	    document.addEventListener("offline", onOffline, false);
 function onOffline() {
-$('#BtnEnt').hide();
-$('#inetOff').show();
-var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+var ref = cordova.InAppBrowser.open('https://elecor.kz/?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 ref.close();
 }
 document.addEventListener("online", onOnline, false);
  
 function onOnline() {
-var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-$('#inetOff').hide();
-$('#BtnEnt').show();
+var ref = cordova.InAppBrowser.open('https://elecor.kz/?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 }
 	    
 if(localStorage.ipush){}
 else{
-$('.loader1').css('height',screen.width+'px');
-$('.loader1').fadeIn();
 }
 		
 
-	    
-var i = 0;
-(function() {
-    if (i < 8) {
-var arr = ["Подготовка списка домов...", "Подготовка изображений...", "Загрузка иконок...", "Настройка данных..."];
-	    $('#loaderInfo').text(arr[i]);
-        i++;
-        setTimeout(arguments.callee, 5000);
-    } else {
- $('#loaderInfo').text("Настройка данных...");
-    } 
-})(); 
-	    
-
 $("#BtnEnt" ).click(function() {
-var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
+var ref = cordova.InAppBrowser.open('https://elecor.kz/?push='+localStorage.ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 });
         
 function didReceiveRemoteNotificationCallBack(jsonData) {}
@@ -77,10 +57,8 @@ function didOpenRemoteNotificationCallBack(jsonData) {}
         
 window.plugins.OneSignal.getIds(function(ids) {
 ipush = ids.userId;
-$('.loader1').hide();
 localStorage.ipush=ipush;
-var ref = cordova.InAppBrowser.open('http://top-star.kz/fr7/index.html?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
-$('.loader2').show();
+var ref = cordova.InAppBrowser.open('https://elecor.kz/?push='+ipush, '_blank', 'location=no,toolbar=no,disallowoverscroll=yes');
 });
         
 
